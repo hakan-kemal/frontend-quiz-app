@@ -30,7 +30,10 @@
           <button type="button" id="css-quiz-btn">CSS</button>
         </li>
         <li>
-          <img src="./assets/images/icon-js.svg" alt="JavaScript icon" />
+          <img
+            src="./assets/images/icon-javascript.svg"
+            alt="JavaScript icon"
+          />
           <button type="button" id="js-quiz-btn">JavaScript</button>
         </li>
         <li>
@@ -44,28 +47,28 @@
 
       <p>Question <span id="question-number">6</span> of 10</p>
 
-      <p>
+      <p id="quiz-question">
         Which of these color contrast ratios defines the minimum WCAG 2.1 Level
         AA requirement for normal text?
       </p>
 
-      <progress id="progress" max="100" value="60">60%</progress>
+      <progress id="progress" max="100" value="10">10%</progress>
 
-      <button type="button">answer A</button>
-      <button type="button">answer B</button>
-      <button type="button">answer C</button>
-      <button type="button">answer D</button>
+      <button type="button" id="answer-a"></button>
+      <button type="button" id="answer-b"></button>
+      <button type="button" id="answer-c"></button>
+      <button type="button" id="answer-d"></button>
 
-      <button type="button">Submit answer</button>
-
+      <button type="button" id="submit-answer">Submit answer</button>
       <h1>Quiz completed <strong>You scored...</strong></h1>
 
       <img
+        id="quiz-category-icon"
         src="./assets/images/icon-accessibility.svg"
         alt="Accessibility icon"
       />
 
-      <p>Accessibility</p>
+      <p id="quiz-category">Accessibility</p>
 
       <p><strong class="quiz-score">8</strong>out of 10</p>
 
