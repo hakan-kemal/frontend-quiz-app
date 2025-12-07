@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Frontend quiz app</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Welcome to the <strong>Frontend Quiz!</strong></h1>
+
+      <p>Pick a subject to get started.</p>
+
+      <ul>
+        <li>
+          <img src="./assets/images/icon-html.svg" alt="HTML icon" />
+          <button type="button" id="html-quiz-btn">HTML</button>
+        </li>
+        <li>
+          <img src="./assets/images/icon-css.svg" alt="CSS icon" />
+          <button type="button" id="css-quiz-btn">CSS</button>
+        </li>
+        <li>
+          <img src="./assets/images/icon-js.svg" alt="JavaScript icon" />
+          <button type="button" id="js-quiz-btn">JavaScript</button>
+        </li>
+        <li>
+          <img
+            src="./assets/images/icon-accessibility.svg"
+            alt="Accessibility icon"
+          />
+          <button type="button" id="a11y-quiz-btn">Accessibility</button>
+        </li>
+      </ul>
+
+      <p>Question <span id="question-number">6</span> of 10</p>
+
+      <p>
+        Which of these color contrast ratios defines the minimum WCAG 2.1 Level
+        AA requirement for normal text?
+      </p>
+
+      <progress id="progress" max="100" value="60">60%</progress>
+
+      <button type="button">answer A</button>
+      <button type="button">answer B</button>
+      <button type="button">answer C</button>
+      <button type="button">answer D</button>
+
+      <button type="button">Submit answer</button>
+
+      <h1>Quiz completed <strong>You scored...</strong></h1>
+
+      <img
+        src="./assets/images/icon-accessibility.svg"
+        alt="Accessibility icon"
+      />
+
+      <p>Accessibility</p>
+
+      <p><strong class="quiz-score">8</strong>out of 10</p>
+
+      <button type="button">Play again</button>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/static/Rubik-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/static/Rubik-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/static/Rubik-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/assets/fonts/Rubik-Italic-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: 300 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --color-white: hsl(0, 100%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-grey-500: hsl(219, 13%, 44%);
+  --color-grey-50: hsl(220, 38%, 97%);
+  --color-blue-950: hsl(214, 24%, 23%);
+  --color-blue-900: hsl(216, 25%, 25%);
+  --color-blue-850: hsl(215, 27%, 32%);
+  --color-blue-500: hsl(223, 100%, 59%);
+  --color-blue-300: hsl(216, 47%, 78%);
+  --color-blue-100: hsl(220, 50%, 95%);
+  --color-blue-50: hsl(225, 100%, 96%);
+  --color-green-500: hsl(151, 68%, 52%);
+  --color-green-100: hsl(151, 88%, 94%);
+  --color-purple-600: hsl(277, 91%, 56%);
+  --color-purple-100: hsl(278, 100%, 95%);
+  --color-orange-400: hsl(22, 100%, 60%);
+  --color-orange-50: hsl(27, 100%, 96%);
+  --color-red-500: hsl(0, 82%, 63%);
+  /* typography */
+  --font-family-base: 'Rubik', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-base: 400;
+  --font-weight-medium: 500;
+  --font-style-base: normal;
+  --font-style-italic: italic;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+  /* spacing */
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-800: 4rem;
+  --spacing-1600: 8rem;
+  --spacing-1800: 9rem;
+  --spacing-2300: 11.5rem;
+  /* border radius */
+  --radius-sm: 0.5rem;
+  --radius-base: 1.5rem;
+  --radius-circle: 50%;
+  --radius-pill: 999px;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: var(--color-grey-50);
+  color: var(--color-blue-900);
+  font: var(--font-weight-base) var(--font-size-base) / var(--line-height-base)
+    var(--font-family-base);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: var(--color-blue-900);
+    color: var(--color-white);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+strong {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-400);
+}
+
+.quiz-score {
+  font-size: 9rem;
+  line-height: 1;
+}
