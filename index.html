@@ -15,7 +15,34 @@
     <script defer src="./script.js"></script>
   </head>
   <body>
-    <main class="container">
+    <header class="header-container">
+      <div class="subject-container" id="subject-container">
+        <img
+          id="subject-icon"
+          class="subject-icon"
+          src="./assets/images/logo-frontend-mentor.svg"
+          alt="Subject icon"
+        />
+        <p class="subject-name" id="subject-name"></p>
+      </div>
+      <div class="toggle-container">
+        <img
+          id="sun-icon"
+          class="sun-icon"
+          src="./assets/images/icon-sun-dark.svg"
+          alt="Sun icon"
+        />
+        <input class="toggle-input" id="toggle" type="checkbox" />
+        <label class="toggle-label" for="toggle"></label>
+        <img
+          id="moon-icon"
+          class="moon-icon"
+          src="./assets/images/icon-moon-dark.svg"
+          alt="Moon icon"
+        />
+      </div>
+    </header>
+    <main class="main-container">
       <h1>Welcome to the <strong>Frontend Quiz!</strong></h1>
 
       <p>Pick a subject to get started.</p>
@@ -30,10 +57,7 @@
           <button type="button" id="css-quiz-btn">CSS</button>
         </li>
         <li>
-          <img
-            src="./assets/images/icon-javascript.svg"
-            alt="JavaScript icon"
-          />
+          <img src="./assets/images/icon-js.svg" alt="JavaScript icon" />
           <button type="button" id="js-quiz-btn">JavaScript</button>
         </li>
         <li>
