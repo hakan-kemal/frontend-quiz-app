@@ -17,12 +17,7 @@
   <body>
     <header class="header-container">
       <div class="subject-container" id="subject-container">
-        <img
-          id="subject-icon"
-          class="subject-icon"
-          src="./assets/images/logo-frontend-mentor.svg"
-          alt="Subject icon"
-        />
+        <img id="subject-icon" class="subject-icon" alt="Subject icon" />
         <p class="subject-name" id="subject-name"></p>
       </div>
       <div class="toggle-container">
@@ -43,60 +38,163 @@
       </div>
     </header>
     <main class="main-container">
-      <h1>Welcome to the <strong>Frontend Quiz!</strong></h1>
+      <!-- Welcome Screen -->
+      <section id="welcome-screen" class="screen">
+        <div class="welcome-content">
+          <h1>Welcome to the <strong>Frontend Quiz!</strong></h1>
+          <p class="subtitle">Pick a subject to get started.</p>
+        </div>
+        <ul class="subject-list">
+          <li class="subject-item html-subject">
+            <button type="button" class="subject-btn" id="html-quiz-btn">
+              <img src="./assets/images/icon-html.svg" alt="" />
+              <span>HTML</span>
+            </button>
+          </li>
+          <li class="subject-item css-subject">
+            <button type="button" class="subject-btn" id="css-quiz-btn">
+              <img src="./assets/images/icon-css.svg" alt="" />
+              <span>CSS</span>
+            </button>
+          </li>
+          <li class="subject-item js-subject">
+            <button type="button" class="subject-btn" id="js-quiz-btn">
+              <img src="./assets/images/icon-js.svg" alt="" />
+              <span>JavaScript</span>
+            </button>
+          </li>
+          <li class="subject-item a11y-subject">
+            <button type="button" class="subject-btn" id="a11y-quiz-btn">
+              <img src="./assets/images/icon-accessibility.svg" alt="" />
+              <span>Accessibility</span>
+            </button>
+          </li>
+        </ul>
+      </section>
 
-      <p>Pick a subject to get started.</p>
+      <!-- Quiz Screen -->
+      <section id="quiz-screen" class="screen hidden">
+        <div class="question-section">
+          <p class="question-counter">
+            Question <span id="question-number">1</span> of
+            <span id="total-questions">10</span>
+          </p>
+          <h2 id="quiz-question" class="question-text"></h2>
+          <progress id="progress" max="100" value="0"></progress>
+        </div>
 
-      <ul>
-        <li>
-          <img src="./assets/images/icon-html.svg" alt="HTML icon" />
-          <button type="button" id="html-quiz-btn">HTML</button>
-        </li>
-        <li>
-          <img src="./assets/images/icon-css.svg" alt="CSS icon" />
-          <button type="button" id="css-quiz-btn">CSS</button>
-        </li>
-        <li>
-          <img src="./assets/images/icon-js.svg" alt="JavaScript icon" />
-          <button type="button" id="js-quiz-btn">JavaScript</button>
-        </li>
-        <li>
-          <img
-            src="./assets/images/icon-accessibility.svg"
-            alt="Accessibility icon"
-          />
-          <button type="button" id="a11y-quiz-btn">Accessibility</button>
-        </li>
-      </ul>
+        <div class="answers-section">
+          <div class="answers-list">
+            <button
+              type="button"
+              class="answer-btn"
+              id="answer-a"
+              data-index="0"
+            >
+              <span class="answer-label">A</span>
+              <span class="answer-text"></span>
+              <img
+                src="./assets/images/icon-correct.svg"
+                alt="Correct"
+                class="answer-icon correct-icon"
+              />
+              <img
+                src="./assets/images/icon-incorrect.svg"
+                alt="Incorrect"
+                class="answer-icon incorrect-icon"
+              />
+            </button>
+            <button
+              type="button"
+              class="answer-btn"
+              id="answer-b"
+              data-index="1"
+            >
+              <span class="answer-label">B</span>
+              <span class="answer-text"></span>
+              <img
+                src="./assets/images/icon-correct.svg"
+                alt="Correct"
+                class="answer-icon correct-icon"
+              />
+              <img
+                src="./assets/images/icon-incorrect.svg"
+                alt="Incorrect"
+                class="answer-icon incorrect-icon"
+              />
+            </button>
+            <button
+              type="button"
+              class="answer-btn"
+              id="answer-c"
+              data-index="2"
+            >
+              <span class="answer-label">C</span>
+              <span class="answer-text"></span>
+              <img
+                src="./assets/images/icon-correct.svg"
+                alt="Correct"
+                class="answer-icon correct-icon"
+              />
+              <img
+                src="./assets/images/icon-incorrect.svg"
+                alt="Incorrect"
+                class="answer-icon incorrect-icon"
+              />
+            </button>
+            <button
+              type="button"
+              class="answer-btn"
+              id="answer-d"
+              data-index="3"
+            >
+              <span class="answer-label">D</span>
+              <span class="answer-text"></span>
+              <img
+                src="./assets/images/icon-correct.svg"
+                alt="Correct"
+                class="answer-icon correct-icon"
+              />
+              <img
+                src="./assets/images/icon-incorrect.svg"
+                alt="Incorrect"
+                class="answer-icon incorrect-icon"
+              />
+            </button>
+          </div>
 
-      <p>Question <span id="question-number">6</span> of 10</p>
+          <button type="button" id="submit-answer" class="submit-btn">
+            Submit Answer
+          </button>
+          <p id="error-message" class="error-message hidden">
+            <img src="./assets/images/icon-error.svg" alt="" />
+            <span>Please select an answer</span>
+          </p>
+        </div>
+      </section>
 
-      <p id="quiz-question">
-        Which of these color contrast ratios defines the minimum WCAG 2.1 Level
-        AA requirement for normal text?
-      </p>
+      <!-- Results Screen -->
+      <section id="results-screen" class="screen hidden">
+        <div class="results-content">
+          <h1>Quiz completed <strong>You scored...</strong></h1>
+        </div>
 
-      <progress id="progress" max="100" value="10">10%</progress>
-
-      <button type="button" id="answer-a"></button>
-      <button type="button" id="answer-b"></button>
-      <button type="button" id="answer-c"></button>
-      <button type="button" id="answer-d"></button>
-
-      <button type="button" id="submit-answer">Submit answer</button>
-      <h1>Quiz completed <strong>You scored...</strong></h1>
-
-      <img
-        id="quiz-category-icon"
-        src="./assets/images/icon-accessibility.svg"
-        alt="Accessibility icon"
-      />
-
-      <p id="quiz-category">Accessibility</p>
-
-      <p><strong class="quiz-score">8</strong>out of 10</p>
-
-      <button type="button">Play again</button>
+        <div class="score-card">
+          <div class="score-header">
+            <img id="results-icon" class="results-subject-icon" src="" alt="" />
+            <p id="results-subject" class="results-subject-name"></p>
+          </div>
+          <p class="score-display">
+            <strong id="final-score" class="quiz-score">0</strong>
+            <span class="score-total"
+              >out of <span id="results-total">10</span></span
+            >
+          </p>
+          <button type="button" id="play-again-btn" class="submit-btn">
+            Play Again
+          </button>
+        </div>
+      </section>
     </main>
   </body>
 </html>
